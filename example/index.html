@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="kalisto.js"></script>
+	<style>
+	
+/* html5doctor.com Reset v1.6.1 - http://cssreset.com */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+/* END html5doctor RESET */
+
+	#container {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		margin: 0 auto;
+	}	
+
+	#container > div{
+		position: relative;
+		width: 100%;
+		height: 100px;
+		z-index: 90;
+
+		-webkit-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);    /*  You can modify your seconds to get a faster/lower animation speed */
+		-moz-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+		-o-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+		-ms-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+		transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+	}
+
+	#container > div.absolute{
+		position: absolute;
+	}
+
+	#container > div.active{
+		z-index: 9999 !important;
+	}
+
+	#red{
+		background-color: red;
+	}
+
+	#blue{
+		background-color: blue;
+	}
+
+	#pink{
+		background-color: pink;
+	}
+
+	#yellow{
+		background-color: yellow;
+	}
+
+	#black{
+		background-color: black;
+	}
+
+	#green{
+		background-color: green;
+	}
+
+	#brown{
+		background-color: brown;
+	}
+	</style>
+
+
+<script>
+	$(document).ready(function(){
+		var prop = {	
+			element : '.element',
+			timing : 'cubic-bezier(1,-0.22,0,1.12)'
+		};
+
+		$('#container').kalisto(prop);
+	});
+</script>
+</head>
+<body>
+	<div id="container">
+		<div class="element" id="red"></div>
+		<div class="element" id="blue"></div>
+		<div class="element" id="pink"></div>
+		<div class="element" id="yellow"></div>
+		<div class="element" id="black"></div>
+		<div class="element" id="green"></div>
+		<div class="element" id="brown"></div>
+	</div>
+</body>
